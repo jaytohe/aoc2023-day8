@@ -41,3 +41,4 @@ finding the least common multiple between 2 and 3.
 
 Generally, the solution is given by lcm(steps_to_reach_z_path1, steps_to_reach_z_path2, ..., steps_to_reach_z_pathN)
 # aoc2023-day8
+# aoc2023-day8
