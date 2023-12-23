@@ -10,11 +10,12 @@ Since I have not seen a very good explanation of why using the least common mult
 
 The key is to notice three things:
 
-a) There are cycles in both the sampe graph and the puzzle input graph.
+a) There are cycles in both the sample graph (sample3.txt) and the puzzle input graph.
 
-b) The exists only one node that ends in Z for each path.
+b) The exists only one cycle for each walk from node ending in A to node ending in Z and that cycle is the cycle that starts and ends at node Z.
+in other words: there is a unique *path* p from A to Z given the map instructions (L or R).
 
-c) The number of steps n it takes to reach a node that ends in Z from a node that ends in A is EQUAL to the number of steps of the cycle 
+c) The number of steps n it takes to reach a node that ends in Z from a node that ends in A (i.e. the length of the path A->Z) is EQUAL to the number of steps of the cycle 
 i.e. looping from node ending in Z back to node ending in Z.
 
 For instance in the sample graph, the length of the path 11A -> 11Z is:
@@ -36,10 +37,7 @@ Similarly, the node 22Z will always be reached in `3*z steps` | z = 1,2,3,...
 
 To reach 22Z and 11Z simultaneously, the number of steps need to be equal i.e. `3*(z) == 2*(k)`
 
-Hence, the problem of finding the number of steps it taken to reach nodes ending in Z simultaneously is converted into
+Hence, the problem of finding the number of steps it takes to reach nodes ending in Z simultaneously is converted into
 finding the least common multiple between 2 and 3.
 
 Generally, the solution is given by lcm(steps_to_reach_z_path1, steps_to_reach_z_path2, ..., steps_to_reach_z_pathN)
-# aoc2023-day8
-# aoc2023-day8
-# aoc2023-day8
